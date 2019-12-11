@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is the perfil page!</h1>
+
+    <div>
+        <h1>Nombre: {{name}}</h1>
+        <h1>Comapny: {{company}}</h1>
+        <h1>language:</h1>
+         <img src="{{image}}"/>
+        <ol>{{#languages}}
+            <li>
+            {{.}}
+            </li>
+            {{/languages}}
+        </ol>
+    </div>
+
+
+       <!-- 
+    <form action="/post" method="POST">
+        <input type="text" name="name" id="Name" placeholder="Name">
+        <input type="text" name="ocupation" id="Ocupation" placeholder="Ocupacion">
+        <input type="submit" value="Enviar">
+    </form>
+-->
+
+</body>
+
+</html>
