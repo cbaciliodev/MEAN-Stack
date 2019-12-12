@@ -1,0 +1,33 @@
+[
+    {
+        "firstname": "Christian",
+        "lastName": "Bacilio de la cruz",
+        "age": 30,
+        "team": "Celula",
+        "position": "programmer"
+    },
+    {
+        "firstname": "David",
+        "lastName": "Sanches de la Vega",
+        "age": 25,
+        "team": "Node",
+        "position": "developer"
+    },
+    {
+        "firstname": "Carlos",
+        "lastName": "Cartagena de la Torre",
+        "age": 30,
+        "team": "Celula",
+        "position": "programmer"
+    },
+    {
+        "firstname": "Jose",
+        "lastName": "Torres",
+        "age": 20,
+        "team": "Node",
+        "position": "developer"
+    }
+]
+/*
+   Queries
+*/
