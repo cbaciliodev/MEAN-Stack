@@ -1,18 +1,26 @@
 const express = require('express');
 const http = require('http');
-const os = require('os');
-const fs = require('fs');
+const socketIos = require('socket.io');
+const puerto = 3000;
+const hostname = '127.0.0.1';
+
 const app = express();
-console.log('Sistema operativo:'+os.platform());
-console.log('Versión del OS:'+os.release());
-console.log('Memoria total:'+os.totalmem()+' bytes');
-console.log('Memoria libre:'+os.freemem()+' bytes');
 
-//Módulo Operative System: 
+const server = http.createServer(app);
 
-app.get('/', (req, res) => {
+app.use(express.static('public'));
 
-    res.json('Hello World');
+server.listen(puerto, hostname, (err) => {
+
+    if (err) {
+        throw new (err);
+    }
+    console.log(`El servidor ok http://${hostname}:${puerto}`);
 });
 
-app.listen(3000);
+
+const io = socketIos.listen(server);
+
+io.on('connect', (socket) => {
+    console.log('nueva conexion : ' + socket.id);
+});
